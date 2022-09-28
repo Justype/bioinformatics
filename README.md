@@ -9,7 +9,7 @@ so it will be divided to three main part
    2. Data Structure
 2. Math
    1. Discrete mathematics
-3. Statics
+3. Statistics
    1. Basic Knowledge
    2. R
    3. Machine Learning

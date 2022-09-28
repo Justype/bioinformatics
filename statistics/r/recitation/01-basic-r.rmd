@@ -1,0 +1,24 @@
+# Loops and Apply
+
+## Get the mean of row
+
+Data
+```{r}
+sampleData = matrix(sample(20:160,20,replace=T)/10, ncol = 4, nrow = 5)
+```
+
+Use for loop
+
+```{r}
+row_mean = numeric()
+for (i in 1:nrow(sampleData)){
+  row_mean[i] = mean(sampleData[i,])
+}
+row_mean
+```
+use apply
+
+```{r}
+# 1 for row, 2 for column
+apply(sampleData, 1, mean)
+```

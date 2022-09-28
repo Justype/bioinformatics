@@ -3,9 +3,18 @@
 - R is a free software environment for statistical computing and graphics
 - based on S Language (expensive, from Bell Lab)
 - well-designed publication-quality plots
-- 
 
+# Cheat Sheet
 
+R Studio
+
+short cut | Usage
+:-- | :--
+`CTRL + ALT + I` | Code Chunk
+
+# Things you may want to know
+
+## Python and R
 
 - R is usually for statistics
 - Python is relatively new. For Machine Learning
@@ -19,10 +28,8 @@
 
 Google Colab: https://colab.to/r
 
-# Familiar Command
+# Shortcuts
 
-- Ctrl-c : copy
-- Ctrl-v : paste
 - Ctrl-L : clear the console
 - Esc : stop
 
@@ -32,8 +39,7 @@ Google Colab: https://colab.to/r
 - Commands are entered after the prompt “>”
 - After you type a command and its arguments, 
 simply press the Return or Enter Key
-  - Separate commands using “ ;” or “newline” 
-(enter)
+  - Separate commands using “ ;” or “newline” (enter)
 
 # R Studio
 
@@ -46,4 +52,6 @@ simply press the Return or Enter Key
 - Working Directory
   - It is a good idea to have separate workspace and history for different projects saved in different directories (folders)
 
-# 
+## R Project
+
+![How to create r project](assets/r-project.png)
