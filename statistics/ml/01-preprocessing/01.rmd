@@ -1,0 +1,7 @@
+# Data Preprocessing
+
+## Import Dataset
+
+```{r}
+dataset = read.csv("Data.csv")
+```

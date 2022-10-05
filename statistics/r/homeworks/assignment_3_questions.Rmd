@@ -1,0 +1,204 @@
+---
+title: 'Homework 3: Fantastic distributions and where to find their PDFs'
+author: "Yen-Chung Chen"
+date: "2022-09-28"
+output: html_document
+---
+### DUE: 10/04/22
+
+### Please submit all your functions and answers in one file.
+
+#### Q1. Let X be a discrete random variable whose probability mass function is described in the table given here.
+
+|||||
+|----|---|---|---|
+| x  | -1| 0 | 1 |
+|f(x)|1/8|6/8|1/8|
+
+Please find:
+
+1. P(X = 0) (2%)
+
+```{r}
+
+```
+
+2. P(X < 10) (2%)
+
+```{r}
+
+```
+
+3. P(X >= 0) (2%)
+
+```{r}
+
+```
+
+4. Define a function `dcustom()` in R that represents the probability mass
+function defined by the table (4%).
+
+```{r}
+
+```
+
+#### Q2. You are working on a mark-recapture study of boreal toads, Bufo boreas. You predict that there is a 40% chance of capturing a marked toad for each of 30 traps that you establish.
+
+1. What is the probability that exactly 20 marked toads will be found in the 30
+traps? Calculate this by hand, and confirm your calculation using R. (5%)
+
+```{r}
+
+```
+
+2. What is the probability that up to 20 marked toads will be found? Use R. (5%)
+
+```{r}
+
+```
+
+#### Q3. A herd of mountain goats is believed to contain 30 males and 20 females. If, for a single capture it is equally easy to capture either male or female goats, what is the probability of capturing less than or equal to 3 females in 10 captures if you don’t release them between captures? (5%)
+
+> Use R to calculate and explain your rationale.
+
+
+```{r}
+
+```
+
+#### Q4. Assume the dog breeder for NYPD has 300 beagles and 700 golden retrievers, and 180 beagles and 20 golden retrievers were selected to train as sniffer dogs.
+
+1. If the selection of sniffer dogs is random, what is the probability to have
+more than or equal to 180 beagles to be selected? (5%)
+
+```{r}
+
+```
+
+2. Assuming the selection process is random, simulate the process of selecting
+200 sniffer dogs from the breeder for 100 times in R. What is the average number
+of beagles you select? (5%)
+
+Keep this line in the answer chunk together with your answer: `set.seed(1234)`.
+`set.seed()` set the *seed* for randomization in R, so if you have `set.seed()`
+run together with an otherwise random process, the result will be consistent,
+which makes grading easier.
+
+```{r}
+set.seed(1234)
+
+# Assign your simulation to an object before calculating the mean because you
+# will need it in the next question.
+
+```
+
+3. With the simulation above in (2), how many times does your simulation
+select > 60 beagles? (5%)
+
+```{r}
+
+```
+
+4. Is the result of the simulation similar to what you get if you address the
+question with `phyper()`? Scale up the simulation to 10,000 repeats. Does the
+number of repeated simulation changes how consistent the simulation is to
+`phyper()`? Describe how you assess similarity. (5%)
+
+```{r}
+
+```
+
+#### Q5. Stanford–Binet IQ test scores are normally distributed with a mean μ, of 100, and a standard deviation σ, of 16. Let Stanford–Binet IQ be described by the random variable X. Use `pnorm()` and `qnorm()` to find the answers.
+
+1. P(X = 50). Justify your answer. (5%)
+
+```{r}
+
+```
+
+2. P(X > 100). Justify your answer. (5%)
+
+```{r}
+
+```
+
+3. 20% of test scores are less than or equal to what IQ? (5%)
+
+```{r}
+
+```
+
+4. 70% of test scores are more than what IQ? (5%)
+
+```{r}
+
+```
+
+#### Q6. It is believed that an average honeycrisp apple weighs 136g. Assuming the weight of honeycrisp apples are normally distributed with a mean of 136g and a standard deviation of 10g, and that you collected 8 apples from an orchard that weighs 901g together
+
+1. What is the probability that apples that are lighter than or as heavy as the
+ones you are collecting have the same weight distribution as honeycrisp apples
+do? (5%)
+
+```{r}
+
+```
+
+
+2. Assuming you have an orchard of normally distributed honeycrisp apples with
+mean weight = 136g and sd = 10g, how heavy is an apple that I have to bring so
+it will be heavier than 90% of the apples in your orchard? (5%)
+
+```{r}
+
+```
+
+
+#### Q7. RNA-seq experiments can be roughly seen as a Poisson process of RNA transcripts being detected. Assuming that there are 5 transcripts for RPL23, a gene encoding a 60S subunit, per 1 million transcripts in a cell type that you sequenced.
+
+1. If you sequence 6 million transcripts, what is the probability that you see
+more than 40 RPL23 transcripts? (5%)
+
+```{r}
+
+```
+
+2. Assuming that transcripts are detected as a Poisson process, with a
+2/1,000,000 (2 in 1 million) detection rate, simulate the process of sequencing
+1 million transcripts for 100 times in R. What is the mean and variance
+(with `var()`) of the number of transcripts detected? (5%)
+
+Keep this line in the answer chunk together with your answer: `set.seed(1234)`.
+`set.seed()` set the *seed* for randomization in R, so if you have `set.seed()`
+run together with an otherwise random process, the result will be consistent,
+which makes grading easier.
+
+```{r}
+set.seed(1234)
+```
+
+3. Alternatively, if we consider the detection of the transcript as a Bernoulli
+process with a probability of 2/1,000,000, we can simulate (2) as a binomial
+process with a size of 1 million. Repeat this simulation 100 times, and
+calculate the mean and variance. Describe how the result compares with (2). (5%)
+
+Keep this line in the answer chunk together with your answer: `set.seed(1234)`.
+`set.seed()` set the *seed* for randomization in R, so if you have `set.seed()`
+run together with an otherwise random process, the result will be consistent,
+which makes grading easier.
+
+```{r}
+set.seed(1234)
+```
+
+4. Scale your simulation up to 10,000 times, and plot the transcript number
+detected as a histogram with 20 bins. (5%)
+
+#### Q8. Assume that the number of sightings for bald eagles (Haliaeetus leucocephalus) at a site over a 4-week period is Poisson distributed (temporally random) with a mean λ = 10. What is the probability of having 15 sightings over a 4-week period?
+
+(5%)
+
+```{r}
+
+```
+
