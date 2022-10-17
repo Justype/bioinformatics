@@ -8,3 +8,6 @@ _site/
 .obsidian/
 
 test/
+
+# Python
+__pycache__/
