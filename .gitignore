@@ -7,7 +7,9 @@ _site/
 .vscode/
 .obsidian/
 
+# For temporary files
 test/
+test.*
 
 # Python
 __pycache__/

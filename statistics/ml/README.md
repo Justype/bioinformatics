@@ -4,7 +4,16 @@
 
 ## Resource
 
-不想花钱，找的资源： [Machine Learning A-Z Hands-On Python & R In Data Science](https://www.bilibili.com/video/BV1EJ411k7c7)
+Books: [Oreilly Hands on Machine Learning, 3rd ed.](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/)
+
+- You can use **the below link** + /ch01.html to freely access this book
+- https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/
+- e.g. https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/preface01.html
+  - preface01.html
+  - part01.html
+  - ch01.html
+
+Video Tutorial： [Machine Learning A-Z Hands-On Python & R In Data Science](https://www.bilibili.com/video/BV1EJ411k7c7)
 
 Requirements:
 
