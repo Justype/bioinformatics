@@ -14,6 +14,18 @@ so it will be divided to three main part
    2. R
    3. Machine Learning
 
+# Install Python and R on ARM
+
+Personally prefer:
+
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [VSCode](https://code.visualstudio.com/) for [Python](https://www.python.org/)
+- [RStudio](https://www.rstudio.com/products/rstudio/) for [R](https://www.r-project.org/)
+
+Installation on arm or VPS
+
+- [bio on arm linux](tips/bio-on-arm-linux.md)
+- [bio on vps](tips/bio-on-vps.md), if you want to use a VPS.
+
 # Basic Terminal Shortcuts
 
 | Shortcut | Usage |
