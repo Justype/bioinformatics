@@ -42,9 +42,11 @@ Host <name you want>
   HostName <ip address or the domain of instance>
   IdentityFile <path of your private SSH key>
   User <user name>
+```
 
-# for example
+for example
 
+```
 Host arm
   HostName 1.1.1.1
   IdentityFile ~/.ssh/ssh-key-arm.key
@@ -57,7 +59,7 @@ Then enjoy coding on VSCode.
 
 ## Custom Domain
 
-You will need an own domain here. or You can register a free subdomain on those website like https://changeip.com.
+You will need an own domain here. or You can register a free subdomain on those website like [ChangeIP.com](https://www.changeip.com/dns.php) (CLAIM FREE DYNAMIC DNS, you can claim multiple domains here).
 
 ### Change Firewall Settings
 
@@ -176,6 +178,14 @@ sudo ln -s ../sites-available/code-server /etc/nginx/sites-enabled/code-server
 sudo certbot --non-interactive --redirect --agree-tos --nginx -d code.mydomain.com -m me@example.com
 sudo certbot --non-interactive --redirect --agree-tos --nginx -d r.mydomain.com -m me@example.com
 ```
+
+# Trouble Shooting
+
+## Too many redirects (When you use Cloudflare DNS)
+
+https://stackoverflow.com/a/60789055/3858492
+
+> In my case it was Cloudflare. I had to change to Full SSL encryption
 
 # References
 

@@ -20,6 +20,16 @@ Because I own an arm Surface and an arm VPS, I spent a lot of time on running Py
    - `conda update --all`
    - `conda install notebook pandas matplotlib biopython`
 
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
+bash Miniconda3-latest-Linux-aarch64.sh
+```
+
+```bash
+conda update --all
+conda install notebook pandas matplotlib biopython
+```
+
 ## R
 
 [build from source](https://www.r-bloggers.com/2022/08/take-the-rstudio-ide-experimental-support-for-arm64-architectures-out-for-a-spin/)
@@ -65,11 +75,13 @@ Other libs you may need to install
 ```bash
 # For Knit and Plotting
 sudo apt install xfonts-100dpi xfonts-75dpi xvfb pandoc
-# For Bioconductor
-sudo apt install libxml2-dev
+# For Bioconductor packages
+sudo apt install libxml2-dev 
+# For smartsnp
+sudo apt install libgsl-dev
 ```
 
-Install tidyverse, Bioconductor, VariantAnnotation
+Install tidyverse, Bioconductor, VariantAnnotation on R
 
 ```
 if (!require("tidyverse", quietly = TRUE))
@@ -81,12 +93,25 @@ if (!require("BiocManager", quietly = TRUE))
 BiocManager::install("VariantAnnotation")
 ```
 
+if you want to uninstall R
+
+```bash
+cd ~/rsource
+sudo make uninstall
+```
+
 ### RStudio Server
 
 - default port is 8787.
 - currently no stable version
 - for arm64: install [pre-release version](https://dailies.rstudio.com/)
 - download deb and install it `sudo gdebi `
+
+## Blast
+
+```bash
+sudo apt install ncbi-blast+
+```
 
 # Trouble Shooting
 
@@ -98,11 +123,16 @@ Error in .External2(C_X11, paste("png::", filename, sep = ""), g$width, : unable
 
 solution: use `cairo` to generate photos.
 
-`nano ~/.Rprofile`
+- add this command to `.Rprofile`
+
+```bash
+nano ~/.Rprofile
+```
 
 ```
 options(bitmapType='cairo')
 ```
+
 # References
 
 1. https://www.r-bloggers.com/2022/08/take-the-rstudio-ide-experimental-support-for-arm64-architectures-out-for-a-spin/

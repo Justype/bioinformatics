@@ -13,6 +13,8 @@ Books: [Oreilly Hands on Machine Learning, 3rd ed.](https://www.oreilly.com/libr
   - part01.html
   - ch01.html
 
+Sorry. That's not true. They would not let you to do that.
+
 Video Tutorial： [Machine Learning A-Z Hands-On Python & R In Data Science](https://www.bilibili.com/video/BV1EJ411k7c7)
 
 Requirements:
