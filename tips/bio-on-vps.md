@@ -127,6 +127,14 @@ default port is 8787.
 - for amd64: [RStudio Server](https://www.rstudio.com/products/rstudio/download-server/)
 - for arm64: [pre-release version](https://dailies.rstudio.com/)
 
+```bash
+sudo apt install gdebi-core
+```
+
+```bash
+sudo gdebi <package.deb>
+```
+
 ### Config Nginx and SSL
 
 [code-server docs](https://coder.com/docs/code-server/latest/guide#using-lets-encrypt-with-nginx)
