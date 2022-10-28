@@ -63,7 +63,7 @@ You will need an own domain here. or You can register a free subdomain on those 
 
 ### Change Firewall Settings
 
-add 0.0.0.0/0 TCP with Destination Port 80,443 on both your instance provider and the linux machine.
+open Port 80,443 on both your instance provider and the linux machine.
 
 #### Firewall of Provider
 
