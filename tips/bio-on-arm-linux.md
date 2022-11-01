@@ -55,11 +55,12 @@ download source code, build it
 latest version on [cran](https://cran.r-project.org/)
 
 ```bash
-mkdir ~/rsource
-cd ~/rsource
-wget https://cran.rstudio.com/src/base/R-4/R-4.2.1.tar.gz # change to the latest version
-tar -xf R-4.2.1.tar.gz
-cd R-4.2.1
+[ -d ~/source ] || mkdir ~/source
+cd ~/source
+wget https://cran.r-project.org/src/base/R-4/R-4.2.2.tar.gz # change to the latest version
+tar -xf R-4.2.2.tar.gz
+rm R-4.2.2.tar.gz
+cd R-4.2.2
 ./configure --enable-R-shlib --with-blas --with-lapack
 make
 ```
@@ -74,11 +75,11 @@ Other libs you may need to install
 
 ```bash
 # For Knit and Plotting
-sudo apt install xfonts-100dpi xfonts-75dpi xvfb pandoc
+sudo apt install -y xfonts-100dpi xfonts-75dpi xvfb pandoc
 # For Bioconductor packages
-sudo apt install libxml2-dev 
+sudo apt install -y libxml2-dev 
 # For smartsnp
-sudo apt install libgsl-dev
+sudo apt install -y libgsl-dev
 ```
 
 Install tidyverse, Bioconductor, VariantAnnotation on R
@@ -96,7 +97,7 @@ BiocManager::install("VariantAnnotation")
 if you want to uninstall R
 
 ```bash
-cd ~/rsource
+cd ~/source/R-4.2.2
 sudo make uninstall
 ```
 
@@ -110,7 +111,7 @@ sudo make uninstall
 ## Blast
 
 ```bash
-sudo apt install ncbi-blast+
+sudo apt install -y ncbi-blast+
 ```
 
 # Trouble Shooting

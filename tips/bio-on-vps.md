@@ -29,6 +29,18 @@ connect to the instance with private key
 3. It should prompt a server key, type `yes` to remember it.
 4. You will see `user@name_of_instance`
 
+## SFTP
+
+[FileZilla](https://filezilla-project.org/)
+
+Mount your site (on Windows)
+
+[Installation](https://github.com/winfsp/sshfs-win)
+
+1. [winfsp](https://github.com/billziss-gh/winfsp/releases/latest)
+2. [sshfs-win](https://github.com/billziss-gh/sshfs-win/releases)
+3. [sshfs-win-manager](https://github.com/evsar3/sshfs-win-manager/releases/latest)
+
 ## VSCode SSH
 
 1. install Remote-SSH on VSCode Extension
@@ -114,8 +126,18 @@ sudo systemctl enable --now code-server@$USER
 
 #### config the password
 
-```
+```bash
 nano ~/.config/code-server/config.yaml
+```
+
+#### set default python interpreter
+
+Set python of conda base as default python interpreter.
+
+`settings.json` (workspace or user)
+
+```json
+  "python.defaultInterpreterPath": "home/ubuntu/miniconda3/bin/python",
 ```
 
 ### RStudio Server
@@ -144,7 +166,9 @@ sudo apt update
 sudo apt install -y nginx certbot python3-certbot-nginx
 ```
 
-`sudo nano /etc/nginx/sites-available/code-server`
+```bash
+sudo nano /etc/nginx/sites-available/code-server
+```
 
 ```bash
 server { # for code-server
